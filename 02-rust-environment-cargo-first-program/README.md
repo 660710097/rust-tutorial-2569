@@ -58,14 +58,16 @@ cargo --version
 
 ---
 
-### 4.2 `[Concept 2]`
+### 4.2 `[Cargo]`
 
-`[อธิบายแนวคิด]`
+`[Cargo คือ **Package Manager และ Build System ของ Rust** ใช้สำหรับสร้างโปรเจกต์ จัดการ Dependencies, Compile และ Run โปรแกรม ทำให้การพัฒนา Rust เป็นระบบมากขึ้น`
 
 ```rust
-// Rust code
+cargo new hello_rust
+cd hello_rust
+cargo run
 ```
-
+`cargo new` สร้างโปรเจกต์ Rust ใหม่พร้อมโครงสร้างพื้นฐาน จากนั้น `cargo run` จะ Compile และรันโปรแกรมในโปรเจกต์นั้น
 ---
 
 ### 4.3 `[Concept 3]`
