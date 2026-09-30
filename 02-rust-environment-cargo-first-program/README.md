@@ -41,8 +41,6 @@
 
 ### 4.1 `[Rust Environment]`
 
-**คำอธิบาย**
-
 `Rust Environment คือเครื่องมือและสภาพแวดล้อมที่จำเป็นสำหรับการเขียนและรันโปรแกรม Rust โดยเครื่องมือหลัก ได้แก่ Rust Compiler (rustc) และ Cargo`
 
 **ตัวอย่าง**
@@ -60,37 +58,35 @@ cargo --version
 
 ### 4.2 `[Cargo]`
 
-`[Cargo คือ **Package Manager และ Build System ของ Rust** ใช้สำหรับสร้างโปรเจกต์ จัดการ Dependencies, Compile และ Run โปรแกรม ทำให้การพัฒนา Rust เป็นระบบมากขึ้น`
+`Cargo คือ **Package Manager และ Build System ของ Rust** ใช้สำหรับสร้างโปรเจกต์ จัดการ Dependencies, Compile และ Run โปรแกรม ทำให้การพัฒนา Rust เป็นระบบมากขึ้น`
 
 ```rust
 cargo new hello_rust
 cd hello_rust
 cargo run
 ```
-`cargo new` สร้างโปรเจกต์ Rust ใหม่พร้อมโครงสร้างพื้นฐาน จากนั้น `cargo run` จะ Compile และรันโปรแกรมในโปรเจกต์นั้น
+**Explanation**
+
+`cargo new` สร้างโปรเจกต์ Rust ใหม่พร้อมโครงสร้างพื้นฐาน จากนั้น `cargo run` จะ Compile และรันโปรแกรมในโปรเจกต์นั้น`
+
 ---
 
-### 4.3 `[Concept 3]`
+### 4.3 `[First Rust Program]`
 
-`[อธิบายแนวคิด]`
+`โปรแกรม Rust แบบง่ายจะเริ่มต้นการทำงานจากฟังก์ชัน main() และสามารถใช้ println!() เพื่อแสดงข้อความออกทางหน้าจอ
 
 ```rust
-// Rust code
+fn main() {
+    println!("Hello, Rust!");
+}
 ```
+**Explanation**
 
+ `fn main()` คือจุดเริ่มต้นของโปรแกรม ส่วน `println!()` เป็น Macro ที่ใช้แสดงข้อความ `Hello, Rust!` ออกทางหน้าจอ
+ 
 ---
 
 ### 4.4 `[Concept 4 — ถ้ามี]`
-
-`[อธิบายแนวคิด]`
-
-```rust
-// Rust code
-```
-
----
-
-### 4.5 `[Concept 5 — ถ้ามี]`
 
 `[อธิบายแนวคิด]`
 
