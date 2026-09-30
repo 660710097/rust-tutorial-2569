@@ -166,51 +166,54 @@ fn main() {
 
 ## 7. Common Mistakes
 
-### Mistake 1 — `[ชื่อข้อผิดพลาด]`
+### Mistake 1 — `รัน cargo run นอกโฟลเดอร์โปรเจกต์`
 
 **Problem**
 
-`[อธิบายปัญหา]`
+`cargo new สร้างโฟลเดอร์ใหม่ให้ แต่ไม่ได้ย้าย directory ให้ ถ้ารัน cargo run ทันทีจะเกิด error`
 
 **Incorrect Code**
 
 ```rust
-// Incorrect example
+cargo new hello_cargo
+cargo run
 ```
 
 **Correct Code**
 
 ```rust
-// Correct example
+cargo new hello_cargo
+cd hello_cargo
+cargo run
 ```
 
 **Why?**
 
-`[อธิบายสาเหตุ]`
+`Cargo อ่านค่ากำหนดโปรเจกต์จากไฟล์ Cargo.toml จึงต้องรันคำสั่งในโฟลเดอร์ของโปรเจกต์ (หรือโฟลเดอร์ย่อยของมัน)`
 
 ---
 
-### Mistake 2 — `[ชื่อข้อผิดพลาด]`
+### Mistake 2 — `ลืมส่ง argument ผ่าน -- ตอนใช้ cargo run`
 
 **Problem**
 
-`[อธิบายปัญหา]`
+`ต้องการส่ง argument ให้โปรแกรมของเรา แต่พิมพ์ต่อท้าย cargo run ตรงๆ โดยเฉพาะ argument ที่ขึ้นต้นด้วย - Cargo จะตีความว่าเป็น option ของ Cargo เอง และแจ้ง error`
 
 **Incorrect Code**
 
 ```rust
-// Incorrect example
+cargo run --name Silpakorn
 ```
 
 **Correct Code**
 
 ```rust
-// Correct example
+cargo run -- --name Silpakorn
 ```
 
 **Why?**
 
-`[อธิบายสาเหตุ]`
+`เครื่องหมาย -- คั่นระหว่าง option ของ Cargo กับ argument ที่จะส่งต่อให้โปรแกรมของเรา สิ่งที่อยู่หลัง -- Cargo จะไม่ตีความเอง`
 
 ---
 
@@ -222,8 +225,9 @@ fn main() {
 
 **Problem**
 
-`โค้ดต่อไปนี้คอมไพล์ผ่านหรือไม่ ถ้าผ่านผลลัพธ์คืออะไร ถ้าไม่ผ่านให้บอกว่าบรรทัดไหนผิดเพราะอะไร
+`โค้ดต่อไปนี้คอมไพล์ผ่านหรือไม่ ถ้าผ่านผลลัพธ์คืออะไร ถ้าไม่ผ่านให้บอกว่าบรรทัดไหนผิดเพราะอะไร`
 
+```rust
 fn main() {
     let x = 10;
     let mut y = 20;
@@ -231,7 +235,7 @@ fn main() {
     x = y - 5;
     println!("{} {}", x, y);
 }
-`
+```
 
 **Hint**
 
@@ -266,8 +270,9 @@ Rust ตรวจจับข้อผิดพลาดนี้ตั้งแ
 
 **Problem**
 
-`โปรแกรมจะแสดงผลลัพธ์ใดออกมา
+`โปรแกรมจะแสดงผลลัพธ์ใดออกมา`
 
+```rust
 fn main() {
     let language = "Rust";
     let tool = "Cargo";
@@ -280,11 +285,9 @@ fn main() {
         println!("Unknown tool");
     }
 }
+```
 
-รันคำสั่ง
-cargo run
-
-`
+`รันคำสั่ง cargo run`
 
 **Hint**
 
