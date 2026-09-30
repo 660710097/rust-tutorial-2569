@@ -218,47 +218,109 @@ fn main() {
 
 > จัดทำแบบฝึกหัด **2 ข้อ** ที่สอดคล้องกับ Topic และมีระดับความยากเหมาะสม
 
-### Exercise 1 — `[ชื่อโจทย์]`
+### Exercise 1 — `คอมไพล์ผ่านหรือไม่? (Immutable Variable)`
 
 **Problem**
 
-`[เขียนโจทย์]`
+`โค้ดต่อไปนี้คอมไพล์ผ่านหรือไม่ ถ้าผ่านผลลัพธ์คืออะไร ถ้าไม่ผ่านให้บอกว่าบรรทัดไหนผิดเพราะอะไร
+
+fn main() {
+    let x = 10;
+    let mut y = 20;
+    y = y + x;
+    x = y - 5;
+    println!("{} {}", x, y);
+}
+`
 
 **Hint**
 
-`[คำใบ้]`
+`ตัวแปรใน Rust เป็น immutable โดยค่าเริ่มต้นสังเกตว่าตัวแปรใดถูกกำหนดค่าใหม่ และตัวแปรนั้นประกาศด้วย mut หรือไม่`
 
 **Solution**
 
 ```rust
-// Solution code
+fn main() {
+    let mut x = 10;
+    let mut y = 20;
+    y = y + x;
+    x = y - 5;
+    println!("{} {}", x, y);
+}
 ```
 
 **Explanation**
 
-`[อธิบายแนวทางแก้]`
+`คอมไพล์ไม่ผ่าน ไม่มีผลลัพธ์ เกิด error ที่บรรทัด x = y - 5;
+
+error[E0384]: cannot assign twice to immutable variable x
+
+x ประกาศด้วย let x = 10; จึงเป็น immutable ไม่สามารถกำหนดค่าใหม่ได้
+y ประกาศด้วย let mut y จึงแก้ค่าได้ บรรทัด y = y + x; ไม่มีปัญหา
+Rust ตรวจจับข้อผิดพลาดนี้ตั้งแต่ขั้นคอมไพล์ ก่อนที่โปรแกรมจะรัน
+ค่าหลังแก้: y = 20 + 10 = 30 แล้ว x = 30 - 5 = 25 จึงพิมพ์ 25 30`
 
 ---
 
-### Exercise 2 — `[ชื่อโจทย์]`
+### Exercise 2 — `ผลลัพธ์คืออะไร? (Cargo และ First Program)`
 
 **Problem**
 
-`[เขียนโจทย์]`
+`โปรแกรมจะแสดงผลลัพธ์ใดออกมา
+
+fn main() {
+    let language = "Rust";
+    let tool = "Cargo";
+
+    println!("Language: {}", language);
+
+    if tool == "Cargo" {
+        println!("Tool: {}", tool);
+    } else {
+        println!("Unknown tool");
+    }
+}
+
+รันคำสั่ง
+cargo run
+
+`
 
 **Hint**
 
-`[คำใบ้]`
+`cargo run จะ Compile และ Run โปรแกรมใน Cargo project
+ดูค่าของตัวแปร language และ tool
+ตรวจสอบเงื่อนไข if ว่าเป็น true หรือ false
+println! แต่ละคำสั่งจะทำงานตามลำดับจากบนลงล่าง`
 
 **Solution**
 
 ```rust
-// Solution code
+    fn main() {
+    let language = "Rust";
+    let tool = "Cargo";
+
+    println!("Language: {}", language);
+
+    if tool == "Cargo" {
+        println!("Tool: {}", tool);
+    } else {
+        println!("Unknown tool");
+    }
+}
+
+
 ```
 
 **Explanation**
 
-`[อธิบายแนวทางแก้]`
+`โปรแกรม คอมไพล์ผ่านและทำงานได้ตามปกติ
+ผลลัพธ์คือ
+Language: Rust
+Tool: Cargo
+cargo run จะทำการ Compile และ Run โปรแกรม
+โดยเริ่มจาก println! แรกจึงแสดง Language: Rust จากนั้นตรวจสอบว่า tool มีค่าเท่ากับ "Cargo" หรือไม่ 
+ซึ่งเป็นจริง จึงทำงานในส่วน if และแสดง Tool: Cargo ส่วน else จะไม่ถูกทำงาน เพราะเงื่อนไขเป็นจริง`
 
 ---
 
