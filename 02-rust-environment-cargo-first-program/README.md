@@ -39,23 +39,22 @@
 
 ## 4. Key Concepts
 
-### 4.1 `[Concept 1]`
+### 4.1 `[Rust Environment]`
 
 **คำอธิบาย**
 
-`[อธิบายแนวคิด]`
+`Rust Environment คือเครื่องมือและสภาพแวดล้อมที่จำเป็นสำหรับการเขียนและรันโปรแกรม Rust โดยเครื่องมือหลัก ได้แก่ Rust Compiler (rustc) และ Cargo`
 
 **ตัวอย่าง**
 
 ```rust
-fn main() {
-    println!("Hello, Rust!");
-}
+rustc --version
+cargo --version
 ```
 
 **Explanation**
 
-`[อธิบายว่า code ทำงานอย่างไร]`
+`rustc --version` ใช้ตรวจสอบเวอร์ชันของ Rust Compiler และ `cargo --version` ใช้ตรวจสอบว่า Cargo ติดตั้งอยู่ในเครื่องหรือไม่ 
 
 ---
 
