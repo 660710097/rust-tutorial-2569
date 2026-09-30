@@ -256,9 +256,6 @@ fn main() {
 **Explanation**
 
 `คอมไพล์ไม่ผ่าน ไม่มีผลลัพธ์ เกิด error ที่บรรทัด x = y - 5;
-
-error[E0384]: cannot assign twice to immutable variable x
-
 x ประกาศด้วย let x = 10; จึงเป็น immutable ไม่สามารถกำหนดค่าใหม่ได้
 y ประกาศด้วย let mut y จึงแก้ค่าได้ บรรทัด y = y + x; ไม่มีปัญหา
 Rust ตรวจจับข้อผิดพลาดนี้ตั้งแต่ขั้นคอมไพล์ ก่อนที่โปรแกรมจะรัน
