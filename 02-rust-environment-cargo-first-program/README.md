@@ -614,7 +614,7 @@ print(f"Hello, {name}!")
 1. `[The Rust Programming Language — Rust Book]`
 2. `[Rust by Example / Rust Reference]`
 3. `[Official documentation ที่เกี่ยวข้องกับ Topic]`
-4. `[แหล่งอ้างอิงเพิ่มเติม]`
+4. `https://doc.rust-lang.org/book/ch01-03-hello-cargo.html`
 
 ---
 
