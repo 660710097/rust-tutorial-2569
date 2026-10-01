@@ -576,9 +576,9 @@ puts "Hello, #{name}!"
 
 > แนะนำให้มีอย่างน้อย **4 แหล่งอ้างอิง** และควรใช้เอกสารทางการเป็นหลัก
 
-1. `[W3Schools]`
-2. `[Rust by Example / Rust Reference]`
-3. `[Official documentation ที่เกี่ยวข้องกับ Topic]`
+1. `W3Schools`
+2. `https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html`
+3. `Official documentation ที่เกี่ยวข้องกับ Topic`
 4. `https://doc.rust-lang.org/book/ch01-03-hello-cargo.html`
 
 ---
