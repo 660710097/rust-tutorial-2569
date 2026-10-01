@@ -463,11 +463,11 @@ Tool: Cargo
 
 | Aspect | Rust | Python | C | C++ | Java | Kotlin | Ruby |
 |---|---|---|---|---|---|---|---|
-| Syntax | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` |
-| Semantics / Behavior | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` |
-| Type System | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` |
-| Memory Management | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` |
-| Safety | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` |
+| Syntax | `ใช้ fn, let และโครงสร้างของ Cargo` | `Syntax กระชับ ใช้ Indentation` | `Syntax เป็นโครงสร้างพื้นฐาน` | `มี Syntax และคุณสมบัติค่อนข้างหลากหลาย` | `เน้น Class และ Object` | `Syntax กระชับกว่า Java` | `Syntax กระชับและอ่านง่าย` |
+| Semantics / Behavior | `ใช้ rustc Compile และ Cargo จัดการ Build/Run` | `ทำงานผ่าน Python Runtime` | `Compile เป็น Native Code` | `Compile เป็น Native Code` | `Compile เป็น Bytecode และทำงานบน JVM` | `Compile และทำงานบน JVM` | `ทำงานผ่าน Ruby Runtime` |
+| Type System | `Static Typing และ Type Inference` | `Dynamic Typing` | `Static Typing` | `Static Typing` | `Static Typing` | `Static Typing` | `Dynamic Typing` |
+| Memory Management | `Ownership, Borrowing และ Lifetime` | `Garbage Collection` | `จัดการ Memory ได้โดยตรง` | `ใช้ RAII และ Smart Pointer` | `Garbage Collection` | `Garbage Collection` | `Garbage Collection` |
+| Safety | `เน้น Memory Safety และตรวจสอบก่อน Runเน้น Memory Safety และตรวจสอบก่อน Run` | `จัดการ Memory อัตโนมัติ` | `มีความเสี่ยงจากการจัดการ Memory` | `มีความยืดหยุ่นแต่ยังมีความเสี่ยงด้าน Memory` | `มีการจัดการ Memory อัตโนมัติ` | `มี Memory Management และ Null Safety` | `จัดการ Memory อัตโนมัติ` |
 
 ### Rust Example
 
