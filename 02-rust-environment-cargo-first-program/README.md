@@ -116,47 +116,156 @@ fn main() {
 
 > **ข้อกำหนด:** Code ทุกตัวต้อง Compile และ Run ได้จริงก่อนนำมาใส่ในเอกสาร
 
-### Example 1 — `[ชื่อ Example]`
+### Example 1 — `[รับชื่อจากผู้ใช้]`
 
-**Purpose:** `[ต้องการสาธิตอะไร]`
+**Purpose:** `ตัวอย่างนี้เป็นการรับข้อมูลจากผู้ใช้ โดยให้ผู้ใช้พิมพ์ชื่อ แล้วโปรแกรมนำชื่อที่พิมพ์มาแสดงบนหน้าจอ`
 
 ```rust
+use std::io;
 fn main() {
-    // Write your runnable Rust code here
+    let mut name = String::new();
+
+    println!("Enter your name:");
+    io::stdin().read_line(&mut name).unwrap();
+
+    println!("Hello, {}!", name.trim());
 }
 ```
 
 **Expected Output**
 
 ```text
-[expected output]
+[Enter your name:
+First
+Hello, First!]
 ```
 
 **Explanation**
 
-`[อธิบาย code ทีละส่วนที่สำคัญ]`
+`เริ่มจาก use std::io; เพื่อเรียกใช้งานคำสั่งที่เกี่ยวกับการรับข้อมูลจากแป้นพิมพ์`
+
+จากนั้นสร้างตัวแปร `name` เป็น `String` สำหรับเก็บชื่อที่ผู้ใช้กรอกเข้ามา
+
+```rust
+let mut name = String::new();
+```
+
+คำว่า `mut` หมายถึงตัวแปรนี้สามารถเปลี่ยนค่าได้ เพราะตอนแรก `name` ยังไม่มีข้อมูล และเราจะเอาข้อมูลที่ผู้ใช้พิมพ์มาใส่ทีหลัง
+
+ส่วน
+
+```rust
+io::stdin().read_line(&mut name).unwrap();
+```
+
+ใช้สำหรับรอรับข้อความจากผู้ใช้ โดยข้อมูลที่กรอกจะถูกเก็บไว้ใน `name`
+
+ที่ต้องใส่ `&mut name` เพราะ Rust ต้องการให้เราอนุญาตให้ฟังก์ชันนี้แก้ไขค่าที่อยู่ในตัวแปร `name`
+
+สุดท้าย
+
+```rust
+println!("Hello, {}!", name.trim());
+```
+
+เอาชื่อที่รับมาแสดงผล โดย `trim()` ใช้ตัดตัวขึ้นบรรทัดใหม่ที่ติดมากับการกด Enter ออก
 
 ---
 
-### Example 2 — `[ชื่อ Example]`
+### Example 2 — `[คำนวณคะแนนและตัดเกรด]`
 
-**Purpose:** `[ต้องการสาธิตอะไร]`
+**Purpose:** `[ตัวอย่างนี้เป็นการนำคะแนนจากหลายส่วนมารวมกัน แล้วใช้ `if` และ `else if` เพื่อตรวจสอบว่าคะแนนรวมได้เกรดอะไร]`
 
 ```rust
 fn main() {
-    // Write your runnable Rust code here
+    let midterm: f64 = 30.0;
+    let final_exam: f64 = 28.0;
+    let kahoot: f64 = 10.0;
+    let project: f64 = 11.0;
+    let attendance: f64 = 3.0;
+    let typing: f64 = 3.0;
+
+    let total = midterm
+        + final_exam
+        + kahoot
+        + project
+        + attendance
+        + typing;
+
+    let grade = if total >= 80.0 {
+        "A"
+    } else if total >= 75.0 {
+        "B+"
+    } else if total >= 70.0 {
+        "B"
+    } else if total >= 60.0 {
+        "C+"
+    } else if total >= 50.0 {
+        "C"
+    } else if total >= 45.0 {
+        "D+"
+    } else if total >= 40.0 {
+        "D"
+    } else {
+        "F"
+    };
+
+    println!("Total: {:.2}/100", total);
+    println!("Grade: {}", grade);
 }
+
 ```
 
 **Expected Output**
 
 ```text
-[expected output]
+[Total: 85.00/100
+Grade: A]
 ```
 
 **Explanation**
 
-`[อธิบาย code]`
+`ในตัวอย่างนี้กำหนดคะแนนของแต่ละส่วนไว้ก่อน เช่น Midterm 30 คะแนน, Final 28 คะแนน และคะแนนส่วนอื่นๆจากนั้นนำคะแนนทั้งหมดมาบวกกันในตัวแปร`total 
+
+```rust
+let total = midterm
+    + final_exam
+    + kahoot
+    + project
+    + attendance
+    + typing;
+```
+
+หลังจากได้คะแนนรวมแล้ว โปรแกรมจะตรวจสอบว่าได้เกรดอะไร โดยใช้ `if` และ `else if`
+
+เช่น ถ้าคะแนนรวมตั้งแต่ 80 คะแนนขึ้นไป จะได้ `"A"`
+
+```rust
+if total >= 80.0 {
+    "A"
+}
+```
+
+ถ้าไม่ถึง 80 โปรแกรมจะไปตรวจสอบเงื่อนไขต่อไปว่าได้ตั้งแต่ 75 หรือไม่ ถ้ายังไม่ถึงก็จะตรวจสอบเงื่อนไขถัดไปเรื่อย ๆ
+
+ส่วน
+
+```rust
+else {
+    "F"
+}
+```
+
+หมายถึงถ้าคะแนนไม่ตรงกับเงื่อนไขไหนเลย ก็ให้เกรด F
+
+สุดท้ายใช้ `println!` แสดงคะแนนรวมและเกรดออกมา
+
+```rust
+println!("Total: {:.2}/100", total);
+println!("Grade: {}", grade);
+```
+
+`{:.2}` ใช้สำหรับแสดงตัวเลขทศนิยม 2 ตำแหน่ง ส่วน `{}` ใช้แสดงค่าทั่วไป เช่นข้อความเกรด
 
 ---
 
