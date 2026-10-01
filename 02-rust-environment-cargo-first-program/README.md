@@ -442,6 +442,11 @@ cargo run จะทำการ Compile และ Run โปรแกรม
 โดยเริ่มจาก println! แรกจึงแสดง Language: Rust จากนั้นตรวจสอบว่า tool มีค่าเท่ากับ "Cargo" หรือไม่ 
 ซึ่งเป็นจริง จึงทำงานในส่วน if และแสดง Tool: Cargo ส่วน else จะไม่ถูกทำงาน เพราะเงื่อนไขเป็นจริง`
 
+**Output**
+```
+Language: Rust
+Tool: Cargo
+```
 ---
 
 ## 9. PPL Perspective
