@@ -661,7 +661,7 @@ puts "Hello, #{name}!"
 | Member 1 | `0` | `0` | `0` | `0` | `เขียน Concept + Short Code Illustration และจัดการ Repository รวบรวมงานกลุ่ม` |
 | Member 2 | `0` | `0` | `0` | `0` | `[รายละเอียด]` |
 | Member 3 | `0` | `0` | `0` | `0` | `[รายละเอียด]` |
-| Member 4 | `0` | `0` | `1` | `0` | `[รายละเอียด]` |
+| Member 4 | `0` | `12` | `1` | `0` | `ทำ Exercises 2ข้อ + Common Mistakes 2 ช้อ และ Challengeข้อทายผลลัพธ์ของโค้ดพร้อมเฉลยและคำอธิบาย` |
 
 ### Teamwork Reflection
 
