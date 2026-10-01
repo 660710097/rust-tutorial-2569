@@ -536,37 +536,51 @@ print(f"Hello, {name}!")
 
 ### C Example
 
-```python
-name = "Python"
-print(f"Hello, {name}!")
+```C
+#include <stdio.h>
+
+int main() {
+    printf("Hello, C!\n");
+    return 0;
+}
 ```
 
 ### C++ Example
 
-```python
-name = "Python"
-print(f"Hello, {name}!")
+```C++
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, C++!" << std::endl;
+    return 0;
+}
 ```
 
 ### Java Example
 
-```python
-name = "Python"
-print(f"Hello, {name}!")
+```Java
+public class Main {
+    public static void main(String[] args) {
+        String name = "Java";
+        System.out.println("Hello, " + name + "!");
+    }
+}
 ```
 
 ### Kotlin Example
 
-```python
-name = "Python"
-print(f"Hello, {name}!")
+```Kotlin
+fun main() {
+    val name = "Kotlin"
+    println("Hello, $name!")
+}
 ```
 
 ### Ruby Example
 
-```python
-name = "Python"
-print(f"Hello, {name}!")
+```Ruby
+name = "Ruby"
+puts "Hello, #{name}!"
 ```
 ### Analysis
 
