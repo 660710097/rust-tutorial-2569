@@ -459,49 +459,15 @@ Tool: Cargo
 
 ## 10. Rust vs. Other Language
 
-**Comparison Language:** `[Python / C / C++ / Java / Kotlin / ...]`
+**Comparison Language:** `[Python / C / C++ / Java / Kotlin / Ruby]`
 
-10.1 Rust vs. Python
-`Syntax: Rust ใช้ fn, let และโครงสร้างของ Cargo ส่วน Python มี Syntax ที่กระชับและใช้ Indentation`
-`Semantics / Behavior: Rust ใช้ rustc และ Cargo ในการ Compile และ Run ส่วน Python ทำงานผ่าน Python Runtime`
-`Type System: Rust เป็น Static Typing ส่วน Python เป็น Dynamic Typing`
-`Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน Python ใช้ Garbage Collection`
-`Safety: Rust เน้น Memory Safety และตรวจสอบหลายอย่างก่อน Run ส่วน Python จัดการ Memory อัตโนมัติ`
-
-10.2 Rust vs. C
-`Syntax: Rust มี fn, let และ Syntax เฉพาะของ Rust ส่วน C ใช้ Syntax แบบภาษาระดับระบบ`
-`Semantics / Behavior: Rust Compile ผ่าน rustc ส่วน C ใช้ Compiler เช่น GCC`
-`Type System: ทั้งสองภาษาเป็น Static Typing`
-`Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน C สามารถจัดการ Memory โดยตรงด้วย malloc() และ free()`
-`afety: Rust มีระบบตรวจสอบ Memory Safety จาก Compiler ส่วน C มีความเสี่ยงจากการจัดการ Memory โดยตรง`
-
-10.3 Rust vs. C++
-`Syntax: Rust มี Syntax ที่เน้นความชัดเจน ส่วน C++ มีคุณสมบัติและ Syntax ที่หลากหลาย`
-`Semantics / Behavior: Rust ใช้ rustc และ Cargo ส่วน C++ ใช้ Compiler เช่น GCC หรือ Clang`
-`Type System: ทั้งสองภาษาเป็น Static Typing`
-`Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน C++ ใช้ RAII และ Smart Pointer`
-`Safety: Rust ตรวจสอบปัญหา Memory หลายประเภทตอน Compile ส่วน C++ ยังเปิดให้จัดการ Pointer และ Memory ได้อย่างอิสระ`
-
-10.4 Rust vs. Java
-`Syntax: Rust ใช้ fn และ let ส่วน Java เน้น Class และ Object`
-`Semantics / Behavior: Rust Compile เป็น Native Code ส่วน Java Compile เป็น Bytecode และทำงานผ่าน JVM`
-`Type System: ทั้งสองภาษาเป็น Static Typing`
-`Memory Management: Rust ใช้ Ownership ส่วน Java ใช้ Garbage Collection`
-`Safety: Rust เน้น Memory Safety ตั้งแต่ Compile Time ส่วน Java จัดการ Memory อัตโนมัติ`
-
-10.5 Rust vs. Kotlin
-`Syntax: Rust ใช้ fn และ let ส่วน Kotlin ใช้ fun และ val / var`
-`Semantics / Behavior: Rust ใช้ rustc และ Cargo ส่วน Kotlin ทำงานบน JVM เป็นหลัก`
-`Type System: ทั้งสองภาษาเป็น Static Typing`
-`Memory Management: Rust ใช้ Ownership ส่วน Kotlin ใช้ Garbage Collection`
-`Safety: Rust เน้น Memory Safety ผ่าน Compiler ส่วน Kotlin มี Null Safety และการจัดการ Memory อัตโนมัติ`
-
-10.6 Rust vs. Ruby
-`Syntax: Rust มี Syntax ที่เป็นระบบมากกว่า ส่วน Ruby เน้นความกระชับและอ่านง่าย`
-`Semantics / Behavior: Rust Compile ก่อน Run ส่วน Ruby ทำงานผ่าน Ruby Runtime`
-`Type System: Rust เป็น Static Typing ส่วน Ruby เป็น Dynamic Typing`
-`Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน Ruby ใช้ Garbage Collection`
-`Safety: Rust ตรวจสอบข้อผิดพลาดหลายอย่างก่อน Run ส่วน Ruby เน้นความง่ายและจัดการ Memory อัตโนมัติ`
+| Aspect | Rust | Python | C | C++ | Java | Kotlin | Ruby |
+|---|---|---|---|---|---|---|---|
+| Syntax | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` |
+| Semantics / Behavior | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` |
+| Type System | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` |
+| Memory Management | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` |
+| Safety | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` | `[อธิบาย]` |
 
 ### Rust Example
 
