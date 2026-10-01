@@ -578,7 +578,7 @@ puts "Hello, #{name}!"
 
 1. `W3Schools`
 2. `https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html`
-3. `Official documentation ที่เกี่ยวข้องกับ Topic`
+3. `https://doc.rust-lang.org/book/ch01-02-hello-world.html`
 4. `https://doc.rust-lang.org/book/ch01-03-hello-cargo.html`
 
 ---
