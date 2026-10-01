@@ -86,16 +86,6 @@ fn main() {
  
 ---
 
-### 4.4 `[Concept 4 — ถ้ามี]`
-
-`[อธิบายแนวคิด]`
-
-```rust
-// Rust code
-```
-
----
-
 ## 5. Important Syntax / Rules
 
 | Syntax / Rule            | Meaning                                                             | Example                            |
@@ -487,46 +477,46 @@ Tool: Cargo
 **Comparison Language:** `[Python / C / C++ / Java / Kotlin / ...]`
 
 10.1 Rust vs. Python
-Syntax: Rust ใช้ fn, let และโครงสร้างของ Cargo ส่วน Python มี Syntax ที่กระชับและใช้ Indentation
-Semantics / Behavior: Rust ใช้ rustc และ Cargo ในการ Compile และ Run ส่วน Python ทำงานผ่าน Python Runtime
-Type System: Rust เป็น Static Typing ส่วน Python เป็น Dynamic Typing
-Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน Python ใช้ Garbage Collection
-Safety: Rust เน้น Memory Safety และตรวจสอบหลายอย่างก่อน Run ส่วน Python จัดการ Memory อัตโนมัติ
+`Syntax: Rust ใช้ fn, let และโครงสร้างของ Cargo ส่วน Python มี Syntax ที่กระชับและใช้ Indentation`
+`Semantics / Behavior: Rust ใช้ rustc และ Cargo ในการ Compile และ Run ส่วน Python ทำงานผ่าน Python Runtime`
+`Type System: Rust เป็น Static Typing ส่วน Python เป็น Dynamic Typing`
+`Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน Python ใช้ Garbage Collection`
+`Safety: Rust เน้น Memory Safety และตรวจสอบหลายอย่างก่อน Run ส่วน Python จัดการ Memory อัตโนมัติ`
 
 10.2 Rust vs. C
-Syntax: Rust มี fn, let และ Syntax เฉพาะของ Rust ส่วน C ใช้ Syntax แบบภาษาระดับระบบ
-Semantics / Behavior: Rust Compile ผ่าน rustc ส่วน C ใช้ Compiler เช่น GCC
-Type System: ทั้งสองภาษาเป็น Static Typing
-Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน C สามารถจัดการ Memory โดยตรงด้วย malloc() และ free()
-Safety: Rust มีระบบตรวจสอบ Memory Safety จาก Compiler ส่วน C มีความเสี่ยงจากการจัดการ Memory โดยตรง
+`Syntax: Rust มี fn, let และ Syntax เฉพาะของ Rust ส่วน C ใช้ Syntax แบบภาษาระดับระบบ`
+`Semantics / Behavior: Rust Compile ผ่าน rustc ส่วน C ใช้ Compiler เช่น GCC`
+`Type System: ทั้งสองภาษาเป็น Static Typing`
+`Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน C สามารถจัดการ Memory โดยตรงด้วย malloc() และ free()`
+`afety: Rust มีระบบตรวจสอบ Memory Safety จาก Compiler ส่วน C มีความเสี่ยงจากการจัดการ Memory โดยตรง`
 
 10.3 Rust vs. C++
-Syntax: Rust มี Syntax ที่เน้นความชัดเจน ส่วน C++ มีคุณสมบัติและ Syntax ที่หลากหลาย
-Semantics / Behavior: Rust ใช้ rustc และ Cargo ส่วน C++ ใช้ Compiler เช่น GCC หรือ Clang
-Type System: ทั้งสองภาษาเป็น Static Typing
-Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน C++ ใช้ RAII และ Smart Pointer
-Safety: Rust ตรวจสอบปัญหา Memory หลายประเภทตอน Compile ส่วน C++ ยังเปิดให้จัดการ Pointer และ Memory ได้อย่างอิสระ
+`Syntax: Rust มี Syntax ที่เน้นความชัดเจน ส่วน C++ มีคุณสมบัติและ Syntax ที่หลากหลาย`
+`Semantics / Behavior: Rust ใช้ rustc และ Cargo ส่วน C++ ใช้ Compiler เช่น GCC หรือ Clang`
+`Type System: ทั้งสองภาษาเป็น Static Typing`
+`Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน C++ ใช้ RAII และ Smart Pointer`
+`Safety: Rust ตรวจสอบปัญหา Memory หลายประเภทตอน Compile ส่วน C++ ยังเปิดให้จัดการ Pointer และ Memory ได้อย่างอิสระ`
 
 10.4 Rust vs. Java
-Syntax: Rust ใช้ fn และ let ส่วน Java เน้น Class และ Object
-Semantics / Behavior: Rust Compile เป็น Native Code ส่วน Java Compile เป็น Bytecode และทำงานผ่าน JVM
-Type System: ทั้งสองภาษาเป็น Static Typing
-Memory Management: Rust ใช้ Ownership ส่วน Java ใช้ Garbage Collection
-Safety: Rust เน้น Memory Safety ตั้งแต่ Compile Time ส่วน Java จัดการ Memory อัตโนมัติ
+`Syntax: Rust ใช้ fn และ let ส่วน Java เน้น Class และ Object`
+`Semantics / Behavior: Rust Compile เป็น Native Code ส่วน Java Compile เป็น Bytecode และทำงานผ่าน JVM`
+`Type System: ทั้งสองภาษาเป็น Static Typing`
+`Memory Management: Rust ใช้ Ownership ส่วน Java ใช้ Garbage Collection`
+`Safety: Rust เน้น Memory Safety ตั้งแต่ Compile Time ส่วน Java จัดการ Memory อัตโนมัติ`
 
 10.5 Rust vs. Kotlin
-Syntax: Rust ใช้ fn และ let ส่วน Kotlin ใช้ fun และ val / var
-Semantics / Behavior: Rust ใช้ rustc และ Cargo ส่วน Kotlin ทำงานบน JVM เป็นหลัก
-Type System: ทั้งสองภาษาเป็น Static Typing
-Memory Management: Rust ใช้ Ownership ส่วน Kotlin ใช้ Garbage Collection
-Safety: Rust เน้น Memory Safety ผ่าน Compiler ส่วน Kotlin มี Null Safety และการจัดการ Memory อัตโนมัติ
+`Syntax: Rust ใช้ fn และ let ส่วน Kotlin ใช้ fun และ val / var`
+`Semantics / Behavior: Rust ใช้ rustc และ Cargo ส่วน Kotlin ทำงานบน JVM เป็นหลัก`
+`Type System: ทั้งสองภาษาเป็น Static Typing`
+`Memory Management: Rust ใช้ Ownership ส่วน Kotlin ใช้ Garbage Collection`
+`Safety: Rust เน้น Memory Safety ผ่าน Compiler ส่วน Kotlin มี Null Safety และการจัดการ Memory อัตโนมัติ`
 
 10.6 Rust vs. Ruby
-Syntax: Rust มี Syntax ที่เป็นระบบมากกว่า ส่วน Ruby เน้นความกระชับและอ่านง่าย
-Semantics / Behavior: Rust Compile ก่อน Run ส่วน Ruby ทำงานผ่าน Ruby Runtime
-Type System: Rust เป็น Static Typing ส่วน Ruby เป็น Dynamic Typing
-Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน Ruby ใช้ Garbage Collection
-Safety: Rust ตรวจสอบข้อผิดพลาดหลายอย่างก่อน Run ส่วน Ruby เน้นความง่ายและจัดการ Memory อัตโนมัติ
+`Syntax: Rust มี Syntax ที่เป็นระบบมากกว่า ส่วน Ruby เน้นความกระชับและอ่านง่าย`
+`Semantics / Behavior: Rust Compile ก่อน Run ส่วน Ruby ทำงานผ่าน Ruby Runtime`
+`Type System: Rust เป็น Static Typing ส่วน Ruby เป็น Dynamic Typing`
+`Memory Management: Rust ใช้ Ownership และ Borrowing ส่วน Ruby ใช้ Garbage Collection`
+`Safety: Rust ตรวจสอบข้อผิดพลาดหลายอย่างก่อน Run ส่วน Ruby เน้นความง่ายและจัดการ Memory อัตโนมัติ`
 
 ### Rust Example
 
@@ -537,13 +527,47 @@ fn main() {
 }
 ```
 
-### `[Other Language]` Example
+### Python Example
 
 ```python
 name = "Python"
 print(f"Hello, {name}!")
 ```
 
+### C Example
+
+```python
+name = "Python"
+print(f"Hello, {name}!")
+```
+
+### C++ Example
+
+```python
+name = "Python"
+print(f"Hello, {name}!")
+```
+
+### Java Example
+
+```python
+name = "Python"
+print(f"Hello, {name}!")
+```
+
+### Kotlin Example
+
+```python
+name = "Python"
+print(f"Hello, {name}!")
+```
+
+### Ruby Example
+
+```python
+name = "Python"
+print(f"Hello, {name}!")
+```
 ### Analysis
 
 `Rust เน้น Safety, Reliability และ Performance โดยใช้ Static Typing, Ownership และ Compiler Checking ขณะที่ Python และ Ruby เน้นความง่ายในการเขียน, C และ C++ เน้นการควบคุมระบบและประสิทธิภาพ และ Java กับ Kotlin เน้นการทำงานบน JVM และการจัดการ Memory อัตโนมัติ`
@@ -565,19 +589,19 @@ print(f"Hello, {name}!")
 
 **Member 1**
 
-`[สิ่งที่รับผิดชอบ]`
+`รับผิดชอบสรุปแนวคิดหลักของ Rust Environment, Cargo และ First Program พร้อมจัดทำตัวอย่างโค้ดสั้น ๆ เพื่อให้เข้าใจการเขียนและรันโปรแกรม Rust เบื้องต้น`
 
 **Member 2**
 
-`[สิ่งที่รับผิดชอบ]`
+`รับผิดชอบเขียนโค้ด Rust แบบละเอียด อธิบายโครงสร้างและการทำงานของโปรแกรม พร้อมสาธิตการสร้างโปรเจกต์และรันโปรแกรมจริงด้วย Cargo`
 
 **Member 3**
 
-`[สิ่งที่รับผิดชอบ]`
+`รับผิดชอบเปรียบเทียบภาษา Rust กับภาษาอื่น เช่น C/C++ และวิเคราะห์แนวคิดของภาษาโปรแกรม (PPL) ในด้าน Syntax, Type System, Memory Management, Compilation และ Performance`
 
 **Member 4**
 
-`[สิ่งที่รับผิดชอบ]`
+`รับผิดชอบจัดทำแบบฝึกหัดเกี่ยวกับ Rust และ Cargo พร้อมยกตัวอย่างข้อผิดพลาดที่พบบ่อย วิธีแก้ไข และคำถามท้าทายเพื่อทดสอบความเข้าใจของผู้เรียน`
 
 > สมาชิกทุกคนต้องสามารถอธิบาย Code ของกลุ่มได้ ไม่ใช่เฉพาะส่วนที่ตนเองเขียน
 
@@ -600,8 +624,8 @@ print(f"Hello, {name}!")
 
 | AI Tool | Purpose | How the Result Was Verified |
 |---|---|---|
-| `[เช่น ChatGPT]` | `[ใช้เพื่ออะไร]` | `[ตรวจสอบอย่างไร]` |
-| `[AI tool]` | `[ใช้เพื่ออะไร]` | `[ตรวจสอบอย่างไร]` |
+| `ChatGPT` | `ใช้เพื่อตรวจสอบความถูกต้องของข้อมูล เพื่อคอนเฟิร์มข้อมูลให้ถูกต้อง` | `ตรวจสอบโดยการเปรียบเทียบกับแหล่งข้อมูลของที่ Ai หามาด้วยอีกที` |
+| `Claude.ai` | `ใช้เป็นตัวช่วยตรวจสอบอีกชั้น เพื่อเช็กความถูกต้องของข้อมูลและโค้ดอย่างละเอียด` | `เปรียบเทียบคำตอบกับ ChatGPT และทดสอบโค้ดก่อนนำเสนอ` |
 
 ### Declaration
 
@@ -620,24 +644,24 @@ print(f"Hello, {name}!")
 
 | Member | Issues | Commits | Pull Requests | Code Reviews | Contribution |
 |---|---:|---:|---:|---:|---|
-| Member 1 | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[รายละเอียด]` |
-| Member 2 | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[รายละเอียด]` |
-| Member 3 | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[รายละเอียด]` |
-| Member 4 | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[รายละเอียด]` |
+| Member 1 | `0` | `0` | `0` | `0` | `เขียน Concept + Short Code Illustration และจัดการ Repository รวบรวมงานกลุ่ม` |
+| Member 2 | `0` | `0` | `0` | `0` | `[รายละเอียด]` |
+| Member 3 | `0` | `0` | `0` | `0` | `[รายละเอียด]` |
+| Member 4 | `0` | `0` | `1` | `0` | `[รายละเอียด]` |
 
 ### Teamwork Reflection
 
 **How did your team collaborate?**
 
-`[อธิบายกระบวนการทำงานร่วมกัน]`
+`กลุ่มของเราแบ่งหน้าที่กันรับผิดชอบตามหัวข้อย่อย และทำงานร่วมกันผ่าน GitHub โดยเริ่มต้นจากให้ตัวแทนกลุ่ม ทำการ Fork Repository หลักของรายวิชามาไว้ที่บัญชีของตนเอง จากนั้นได้ทำการเชิญ (Invite) สมาชิกคนอื่นๆ ในกลุ่มเข้ามาเป็น Collaborator ใน Repository นั้น เพื่อให้ทุกคนสามารถเข้ามาแก้ไขไฟล์และกด Commit โค้ดลงใน Branch "main" ร่วมกันได้โดยตรง ทำให้สามารถรวบรวมงานทั้งหมดไว้ในที่เดียวกันได้อย่างเป็นระบบ`
 
 **Problems encountered**
 
-`[ปัญหาที่พบ]`
+`ในช่วงแรก กลุ่มของเราพบปัญหาเรื่องความเข้าใจในการทำ Pull Request (PR) และการจัดการ Branch โดยสมาชิกมีการแก้ไขไฟล์และ Commit แยกกันไปคนละ Branch (เช่น patch-1, patch-4) และต่างคนต่างเปิด PR ซ้อนกัน ทำให้โค้ดของสมาชิกแต่ละคนไม่มารวมอยู่ใน PR เดียวกัน นอกจากนี้ยังพบปัญหาความสับสนในการเลือกเป้าหมาย (Base/Compare repository) ในการรวมไฟล์ ทำให้หน้าต่างเปรียบเทียบไม่แสดงผลอัปเดตล่าสุด`
 
 **How did you solve them?**
 
-`[วิธีแก้ปัญหา]`
+`เราแก้ปัญหาโดยการปรับโครงสร้างการทำงานใหม่ทั้งหมด โดยเข้าไปตั้งค่าในเมนู Settings > Collaborators เพื่อมอบสิทธิ์ให้เพื่อนทุกคนสามารถเข้าถึง Repository ของตัวแทนกลุ่มได้โดยตรง เมื่อทุกคนกดยอมรับคำเชิญแล้ว เราได้ตกลงกันให้สมาชิกทุกคนทำการแก้ไขและ Commit งานลงใน Branch "main" เพียงที่เดียว เมื่อไฟล์งานของทุกคนรวมกันเสร็จสมบูรณ์แล้ว ตัวแทนกลุ่มจึงทำการเปิด Pull Request ใหม่ที่ดึงข้อมูลจาก Branch "main" ของกลุ่ม ส่งไปยัง Branch "main" ของอาจารย์ ทำให้สามารถรวบรวมงานเป็นชิ้นเดียวได้สำเร็จ`
 
 ---
 
@@ -667,10 +691,10 @@ print(f"Hello, {name}!")
 
 **Chapter Path:** `[เช่น chapters/01-introduction/]`
 
-**Final PR:** `#[PR number]`
+**Final PR:** `#21`
 
-**Submitted by:** `[Group XX]`
+**Submitted by:** `[Group 02]`
 
-**Date:** `[YYYY-MM-DD]`
+**Date:** `[2036-09-30]`
 
 *โครงสร้างเอกสารฉบับเต็ม (Key Concepts, Runnable Code Examples, Common Mistakes, Exercises, PPL Perspective, Rust vs Other Language, References, AI Usage Declaration, GitHub Contribution, Final Checklist) ให้ทำต่อจากจุดนี้ตาม Template หลักของวิชา (`rust_tutorial_template.md`) ที่แนบมากับใบมอบหมายงาน*
