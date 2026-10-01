@@ -143,11 +143,14 @@ println!("Name : {}", name.trim());
 
 ```rust
 use std::io;
+
 fn main() {
     let mut name = String::new();
 
     println!("Enter your name:");
-    io::stdin().read_line(&mut name).unwrap();
+    io::stdin()
+        .read_line(&mut name)
+        .expect("Failed to read line");
 
     println!("Hello, {}!", name.trim());
 }
@@ -156,32 +159,38 @@ fn main() {
 **Expected Output**
 
 ```text
-[Enter your name:
+Enter your name:
 First
-Hello, First!]
+Hello, First!
 ```
 
 **Explanation**
 
-`เริ่มจาก use std::io; เพื่อเรียกใช้งานคำสั่งที่เกี่ยวกับการรับข้อมูลจากแป้นพิมพ์`
+เริ่มจาก
 
-จากนั้นสร้างตัวแปร `name` เป็น `String` สำหรับเก็บชื่อที่ผู้ใช้กรอกเข้ามา
+```rust
+use std::io;
+```
+
+เพื่อเรียกใช้เครื่องมือจาก Rust Standard Library สำหรับการรับข้อมูลจากผู้ใช้
+
+จากนั้นสร้างตัวแปร `name` สำหรับเก็บชื่อ
 
 ```rust
 let mut name = String::new();
 ```
 
-คำว่า `mut` หมายถึงตัวแปรนี้สามารถเปลี่ยนค่าได้ เพราะตอนแรก `name` ยังไม่มีข้อมูล และเราจะเอาข้อมูลที่ผู้ใช้พิมพ์มาใส่ทีหลัง
+คำว่า `mut` ทำให้ตัวแปรสามารถเปลี่ยนค่าได้ เพราะข้อมูลจะถูกเพิ่มเข้าไปหลังจากผู้ใช้กรอกชื่อ
 
 ส่วน
 
 ```rust
-io::stdin().read_line(&mut name).unwrap();
+io::stdin()
+    .read_line(&mut name)
+    .expect("Failed to read line");
 ```
 
-ใช้สำหรับรอรับข้อความจากผู้ใช้ โดยข้อมูลที่กรอกจะถูกเก็บไว้ใน `name`
-
-ที่ต้องใส่ `&mut name` เพราะ Rust ต้องการให้เราอนุญาตให้ฟังก์ชันนี้แก้ไขค่าที่อยู่ในตัวแปร `name`
+ใช้สำหรับรับข้อความจากแป้นพิมพ์และเก็บข้อมูลไว้ใน `name`
 
 สุดท้าย
 
@@ -189,104 +198,64 @@ io::stdin().read_line(&mut name).unwrap();
 println!("Hello, {}!", name.trim());
 ```
 
-เอาชื่อที่รับมาแสดงผล โดย `trim()` ใช้ตัดตัวขึ้นบรรทัดใหม่ที่ติดมากับการกด Enter ออก
+ใช้แสดงชื่อของผู้ใช้ โดย `trim()` ใช้ตัดตัวขึ้นบรรทัดใหม่ที่ติดมากับการกด Enter
 
 ---
 
 ### Example 2 — `[คำนวณคะแนนและตัดเกรด]`
 
-**Purpose:** `[ตัวอย่างนี้เป็นการนำคะแนนจากหลายส่วนมารวมกัน แล้วใช้ `if` และ `else if` เพื่อตรวจสอบว่าคะแนนรวมได้เกรดอะไร]`
+**Purpose:** ตัวอย่างนี้แสดงการรับคะแนนจากผู้ใช้และนำคะแนนที่รับมาแสดงผล ซึ่งเป็นแนวคิดเดียวกับโปรแกรม `Student Score Recorder PPL`
 
 ```rust
+use std::io;
+
 fn main() {
-    let midterm: f64 = 30.0;
-    let final_exam: f64 = 28.0;
-    let kahoot: f64 = 10.0;
-    let project: f64 = 11.0;
-    let attendance: f64 = 3.0;
-    let typing: f64 = 3.0;
+    let mut midterm = String::new();
 
-    let total = midterm
-        + final_exam
-        + kahoot
-        + project
-        + attendance
-        + typing;
+    println!("Enter Midterm score (35):");
+    io::stdin()
+        .read_line(&mut midterm)
+        .expect("Failed to read line");
 
-    let grade = if total >= 80.0 {
-        "A"
-    } else if total >= 75.0 {
-        "B+"
-    } else if total >= 70.0 {
-        "B"
-    } else if total >= 60.0 {
-        "C+"
-    } else if total >= 50.0 {
-        "C"
-    } else if total >= 45.0 {
-        "D+"
-    } else if total >= 40.0 {
-        "D"
-    } else {
-        "F"
-    };
-
-    println!("Total: {:.2}/100", total);
-    println!("Grade: {}", grade);
+    println!("Midterm: {}/35", midterm.trim());
 }
-
 ```
 
 **Expected Output**
 
 ```text
-[Total: 85.00/100
-Grade: A]
+Enter Midterm score (35):
+30
+Midterm: 30/35
 ```
 
 **Explanation**
 
-`ในตัวอย่างนี้กำหนดคะแนนของแต่ละส่วนไว้ก่อน เช่น Midterm 30 คะแนน, Final 28 คะแนน และคะแนนส่วนอื่นๆจากนั้นนำคะแนนทั้งหมดมาบวกกันในตัวแปร`total 
+โปรแกรมสร้างตัวแปร `midterm` เพื่อใช้เก็บคะแนนที่ผู้ใช้กรอก
 
 ```rust
-let total = midterm
-    + final_exam
-    + kahoot
-    + project
-    + attendance
-    + typing;
+let mut midterm = String::new();
 ```
 
-หลังจากได้คะแนนรวมแล้ว โปรแกรมจะตรวจสอบว่าได้เกรดอะไร โดยใช้ `if` และ `else if`
-
-เช่น ถ้าคะแนนรวมตั้งแต่ 80 คะแนนขึ้นไป จะได้ `"A"`
+จากนั้นใช้
 
 ```rust
-if total >= 80.0 {
-    "A"
-}
+io::stdin()
+    .read_line(&mut midterm)
+    .expect("Failed to read line");
 ```
 
-ถ้าไม่ถึง 80 โปรแกรมจะไปตรวจสอบเงื่อนไขต่อไปว่าได้ตั้งแต่ 75 หรือไม่ ถ้ายังไม่ถึงก็จะตรวจสอบเงื่อนไขถัดไปเรื่อย ๆ
+เพื่อรับคะแนนจากผู้ใช้และเก็บไว้ในตัวแปร `midterm`
 
-ส่วน
+สุดท้ายใช้
 
 ```rust
-else {
-    "F"
-}
+println!("Midterm: {}/35", midterm.trim());
 ```
 
-หมายถึงถ้าคะแนนไม่ตรงกับเงื่อนไขไหนเลย ก็ให้เกรด F
+เพื่อแสดงคะแนนที่ผู้ใช้ป้อน โดย `{}` ใช้สำหรับแทรกค่าของตัวแปรลงในข้อความ และ `trim()` ใช้ตัดตัวขึ้นบรรทัดใหม่ออก
 
-สุดท้ายใช้ `println!` แสดงคะแนนรวมและเกรดออกมา
-
-```rust
-println!("Total: {:.2}/100", total);
-println!("Grade: {}", grade);
-```
-
-`{:.2}` ใช้สำหรับแสดงตัวเลขทศนิยม 2 ตำแหน่ง ส่วน `{}` ใช้แสดงค่าทั่วไป เช่นข้อความเกรด
+ตัวอย่างนี้สามารถนำหลักการเดียวกันไปใช้กับคะแนน `Final`, `Kahoot`, `Project`, `Attendance` และ `Typing` ในโปรแกรมหลักได้
 
 ---
 
