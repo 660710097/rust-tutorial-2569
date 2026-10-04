@@ -601,7 +601,7 @@ puts "Hello, #{name}!"
 
 **รายละเอียดการใช้ AI**
 
-`[อธิบายว่าใช้ AI ในขั้นตอนใด และสมาชิกตรวจสอบผลลัพธ์อย่างไร]`
+`กลุ่มของเราใช้ AI (ChatGPT และ Claude) เป็นผู้ช่วยในขั้นตอนการค้นคว้ารวบรวมข้อมูลและสรุปเนื้อหาทฤษฎี (เช่น เรื่อง Rust Environment, Cargo & First Program) เพื่อนำมาจัดโครงสร้างให้อ่านและทำความเข้าใจได้ง่ายขึ้น รวมถึงใช้ช่วยตรวจทานความถูกต้องของโค้ดตัวอย่างเบื้องต้น`
 
 ---
 
@@ -609,7 +609,7 @@ puts "Hello, #{name}!"
 
 | Member | Issues | Commits | Pull Requests | Code Reviews | Contribution |
 |---|---:|---:|---:|---:|---|
-| Member 1 | `0` | `0` | `0` | `0` | `เขียน Concept + Short Code Illustration และจัดการ Repository รวบรวมงานกลุ่ม` |
+| Member 1 | `0` | `14` | `1` | `0` | `เขียน Concept + Short Code Illustration และจัดการ Repository รวบรวมงานกลุ่ม` |
 | Member 2 | `0` | `0` | `0` | `0` | `เขียน Important Syntax / Rules และ Runnable Code Examples พร้อม Detailed Code + Live Demo` |
 | Member 3 | `0` | `6` | `0` | `0` | ` Rust vs Other Language + PPL Analysis (เปรียบเทียบภาษา + วิเคราะห์เชิง PPL)` |
 | Member 4 | `0` | `12` | `1` | `0` | `ทำ Exercises 2ข้อ + Common Mistakes 2 ช้อ และ Challengeข้อทายผลลัพธ์ของโค้ดพร้อมเฉลยและคำอธิบาย` |
@@ -643,7 +643,7 @@ puts "Hello, #{name}!"
 - [x] Rust vs Other Language
 - [x] References อย่างน้อย 4 แหล่ง
 - [x] AI Usage Declaration
-- [ ] GitHub Contribution
+- [x] GitHub Contribution
 - [x] สมาชิกทั้ง 4 คนมีส่วนร่วม
 - [x] สมาชิกทั้ง 4 คนพร้อมนำเสนอคนละ 5 นาที
 - [x] สมาชิกทุกคนสามารถอธิบาย Code ของกลุ่มได้
@@ -660,6 +660,6 @@ puts "Hello, #{name}!"
 
 **Submitted by:** `[Group 02]`
 
-**Date:** `[2036-09-30]`
+**Date:** `[2026-09-30]`
 
 *โครงสร้างเอกสารฉบับเต็ม (Key Concepts, Runnable Code Examples, Common Mistakes, Exercises, PPL Perspective, Rust vs Other Language, References, AI Usage Declaration, GitHub Contribution, Final Checklist) ให้ทำต่อจากจุดนี้ตาม Template หลักของวิชา (`rust_tutorial_template.md`) ที่แนบมากับใบมอบหมายงาน*
