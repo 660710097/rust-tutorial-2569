@@ -610,7 +610,7 @@ puts "Hello, #{name}!"
 | Member | Issues | Commits | Pull Requests | Code Reviews | Contribution |
 |---|---:|---:|---:|---:|---|
 | Member 1 | `0` | `14` | `1` | `0` | `เขียน Concept + Short Code Illustration และจัดการ Repository รวบรวมงานกลุ่ม` |
-| Member 2 | `0` | `0` | `0` | `0` | `เขียน Important Syntax / Rules และ Runnable Code Examples พร้อม Detailed Code + Live Demo` |
+| Member 2 | `0` | `11` | `0` | `1` | `เขียน Important Syntax / Rules และ Runnable Code Examples พร้อม Detailed Code + Live Demo` |
 | Member 3 | `0` | `6` | `0` | `0` | ` Rust vs Other Language + PPL Analysis (เปรียบเทียบภาษา + วิเคราะห์เชิง PPL)` |
 | Member 4 | `0` | `12` | `1` | `0` | `ทำ Exercises 2ข้อ + Common Mistakes 2 ช้อ และ Challengeข้อทายผลลัพธ์ของโค้ดพร้อมเฉลยและคำอธิบาย` |
 
